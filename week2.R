@@ -1,24 +1,5 @@
-rm(list = ls())
-behavior <- read.csv("C:/Users/lotus/OneDrive/文件/R_deta/behavior.csv")
-head(behavior)
-summary(behavior)
-table(behavior$gender)
-prop.table(table(behavior$gender))
-table(behavior$class,behavior$gender)
-prop.table(table(behavior$class,behavior$gender))
-mean(behavior$score)
-sd(behavior$score)
-median(behavior$score)
-quantile(behavior$score,probs = c(0,0.13,0.26,0.47,0.68,0.77,0.95,1))
-boxplot(behavior$score)
-boxplot(score~gender,data = behavior,xlab="性別",ylab = "分數",main="分數based on 性別")
-boxplot(score~class,data = behavior,xlab="班級",ylab = "分數",main="分數based on 班級")
-graph1 <- hist(behavior$score,main = "score distribution",xlab = "score",ylab = "nuber of student",col="blue",breaks = 20)
-plot(behavior$score,behavior$sleep,col="blue",pch=8)
-pairs(~score+sleep+sport,data=behavior,main="scatterplot matrix")
-performance<-behavior[,3:5]
-cor(performance)
-install.packages("corrplot")
-library(corrplot)
-
-corrplot(cor(performance),method = "number")
+中山大學
+政治經濟系
+大四
+徐乃巖
+R：程式、機率與統計
